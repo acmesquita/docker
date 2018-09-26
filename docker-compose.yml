@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  rails:
+    image: anacatharina/ubuntu-rails-sshd
+    volumes:
+      - .:/home/app
+    ports:
+      - "3000"
+      - "22"
+
