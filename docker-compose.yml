@@ -11,6 +11,8 @@ services:
     ports:
       - "3000"
       - "22"
+    networks:
+      - my_networks
   db:
     image: postgres
     restart: always
@@ -20,3 +22,10 @@ services:
       - ./postgres:/var/lib/potgresql/data
     ports:
       - "5432"
+    networks:
+      my_networks:
+        aliases:
+          - pgsql
+
+networks:
+  my_networks:
