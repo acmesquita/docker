@@ -3,6 +3,8 @@ version: '3'
 services:
   rails:
     build: .
+    depends_on:
+      - db
     image: anacatharina/ubuntu-rails-sshd
     volumes:
       - .:/projects
