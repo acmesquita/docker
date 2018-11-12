@@ -5,7 +5,7 @@ services:
     build: .
     image: anacatharina/ubuntu-rails-sshd
     volumes:
-      - .:/home/app
+      - .:/projects
     ports:
       - "3000"
       - "22"
